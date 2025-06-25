@@ -1,4 +1,3 @@
-// Test PR - trigger Jenkins build
 pipeline {
     agent any
     environment {
@@ -36,6 +35,9 @@ pipeline {
   failure{
        echo 'Failure in the build'
    }
+   aborted{
+       echo 'build is aborted'
+   }    
 
   }
 
